@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url(img/capa2.jpg) no-repeat center / cover;
+    padding: 50px 5%;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(30px);
+    border-radius: 30px;
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+    overflow: hidden;
+}
+
+@keyframes zoom-in {
+    100% {
+        transform: scale(1);
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-bottom: 2px solid #fff;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 50px;
+    padding: 50px 5% 0;
+    color: #fff;
+    animation-delay: 1.5s;
+    flex-wrap: wrap;
+}
+
+.home-detail h1 {
+    font-size: 55px;
+    line-height: 1.1;
+}
+
+.home-detail h2 {
+    font-size: 32px;
+}
+
+.home-detail p {
+    margin: 10px 0 20px;
+    max-width: 500px;
+}
+
+/* Ajuste principal para os ícones sociais */
+.home-detail .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; /* padrão desktop: alinhado à esquerda */
+}
+
+.download-social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 30px;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #fff;
+    box-shadow: none;
+}
+
+.home-detail .social-icons a {
+    padding: 6px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.home-detail .social-icons a:hover {
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #c34284;
+    overflow: hidden;
+}
+
+.home-img .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* 🔥 RESPONSIVIDADE TOTAL */
+@media (max-width: 991px) {
+    .home {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home-detail h1 {
+        font-size: 45px;
+    }
+
+    .home-detail h2 {
+        font-size: 26px;
+    }
+
+    .home-img .img-box {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 90px;
+        right: 5%;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-20px);
+        transition: .3s;
+    }
+
+    .navbar.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .navbar a {
+        margin: 0;
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 200;
+    }
+
+    .home {
+        flex-direction: column;
+        gap: 30px;
+        padding: 100px 5% 50px;
+    }
+
+    .home-detail h1 {
+        font-size: 38px;
+    }
+
+    .home-detail h2 {
+        font-size: 22px;
+    }
+
+    .home-img .img-box {
+        width: 180px;
+        height: 180px;
+    }
+    
+    /* Centralizar os ícones sociais no celular */
+    .home-detail .social-icons {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-detail h1 {
+        font-size: 32px;
+    }
+
+    .home-detail h2 {
+        font-size: 18px;
+    }
+
+    .home-detail p {
+        font-size: 14px;
+    }
+
+    .home-img .img-box {
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        font-size: 25px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .home-detail .social-icons a {
+        padding: 6px;
+        font-size: 18px;
+    }
+    
+    /* Centralizar os ícones sociais no celular */
+    .home-detail .social-icons {
+        justify-content: center !important;
+    }
+}

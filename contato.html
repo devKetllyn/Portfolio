@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="contato.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="animated">
+            <a href="#" class="logo">Portfólio.</a>
+
+            <nav class="navbar">
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html" class="active">Contato</a>
+            </nav>
+
+            <div class="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
+        </header>
+
+        <section class="home animated">
+            <div class="home-detail">
+                <h1>Entre em contato:</h1>
+                <p>Estou sempre aberta a novas oportunidades e colaborações. Você pode me encontrar nas redes sociais
+                    abaixo:</p>
+
+                <div class="social-container">
+                    <a href="https://wa.me/5551985208891" class="social-card" target="_blank">
+                        <i class="ri-whatsapp-line"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://github.com/ketllynmt" class="social-card" target="_blank">
+                        <i class="ri-github-fill"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ketllyn-m-898760232/" class="social-card" target="_blank">
+                        <i class="ri-linkedin-fill"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/ketllynmt/" class="social-card" target="_blank">
+                        <i class="ri-instagram-line"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.onclick = () => {
+            navbar.classList.toggle('active');
+        };
+    </script>
+
+</body>
+
+</html>

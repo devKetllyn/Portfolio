@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="sobre.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="animated">
+            <a href="#" class="logo">Portfólio.</a>
+
+            <nav class="navbar">
+                <a href="index.html">Início</a>
+                <a href="sobre.html" class="active">Sobre</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <div class="menu-icon" id="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
+        </header>
+
+        <section class="home animated">
+            <div class="home-detail">
+                <h1>Formação Acadêmica</h1>
+                <p>
+                    Minha jornada na área de tecnologia começou em 2022, quando iniciei o curso técnico de Análise e Desenvolvimento de Sistemas no Senac Tech, sendo concluído em 2024. Durante esse período, desenvolvi uma base sólida em programação, lógica e desenvolvimento de sistemas, o que despertou ainda mais meu interesse por essa área. Em 2025, dei um novo passo ao iniciar a graduação na mesma área na Universidade Luterana do Brasil (Ulbra), com o objetivo de ampliar meus conhecimentos e explorar novas possibilidades dentro do campo da tecnologia. Tenho grande interesse por inovação e estou sempre em busca de crescimento, acreditando que o conhecimento é a chave para acompanhar as constantes transformações do mercado.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuIcon.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>
